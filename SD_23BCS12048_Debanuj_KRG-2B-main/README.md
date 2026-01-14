@@ -1,1 +1,0 @@
-# SD_23BCS12048_Debanuj_KRG-2B
