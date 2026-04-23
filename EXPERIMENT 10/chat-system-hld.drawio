@@ -1,0 +1,330 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="chat-system-hld">
+    <mxGraphModel dx="3770" dy="1611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ═══════ TITLE ═══════ -->
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;strokeColor=none;fillColor=none;fontStyle=1;fontSize=17;" value="Aim: Design a Real-Time Chat System" vertex="1">
+          <mxGeometry height="40" width="500" x="175" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;strokeColor=none;fillColor=none;fontSize=11;" value="Simulates how apps like WhatsApp / Slack deliver messages using Redis Queues, Pub/Sub, and Socket.IO" vertex="1">
+          <mxGeometry height="25" width="640" x="55" y="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="div0" parent="1" style="endArrow=none;html=1;strokeWidth=5;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-750" y="80" as="sourcePoint" />
+            <mxPoint x="1600" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════
+             A. FUNCTIONAL REQUIREMENTS
+        ═══════════════════════════════════════ -->
+        <mxCell id="a-hdr" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" value="A. Functional Requirements" vertex="1">
+          <mxGeometry height="24" width="260" x="-750" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="fr1" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="1. Users should be able to join rooms (general, tech, etc.)" vertex="1"><mxGeometry height="22" width="480" x="-730" y="114" as="geometry"/></mxCell>
+        <mxCell id="fr2" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="2. Users should be able to send messages to a room in real-time." vertex="1"><mxGeometry height="22" width="490" x="-730" y="136" as="geometry"/></mxCell>
+        <mxCell id="fr3" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="3. All users in a room should receive the message instantly via Pub/Sub." vertex="1"><mxGeometry height="22" width="510" x="-730" y="158" as="geometry"/></mxCell>
+        <mxCell id="fr4" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="4. System should maintain last 20 messages per room (chat history)." vertex="1"><mxGeometry height="22" width="490" x="-730" y="180" as="geometry"/></mxCell>
+        <mxCell id="fr5" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="5. System should track online/offline status of users." vertex="1"><mxGeometry height="22" width="440" x="-730" y="202" as="geometry"/></mxCell>
+        <mxCell id="fr6" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="6. System should track unread message count per user." vertex="1"><mxGeometry height="22" width="440" x="-730" y="224" as="geometry"/></mxCell>
+        <mxCell id="fr7" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="7. Every message should be logged with sender, content, timestamp, status." vertex="1"><mxGeometry height="22" width="500" x="-730" y="246" as="geometry"/></mxCell>
+
+        <!-- ═══════════════════════════════════════
+             B. NON-FUNCTIONAL REQUIREMENTS
+        ═══════════════════════════════════════ -->
+        <mxCell id="b-hdr" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" value="B. Non-Functional Requirements" vertex="1">
+          <mxGeometry height="24" width="280" x="-750" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="nfr1" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="1. Scale: Multiple users in multiple rooms simultaneously." vertex="1"><mxGeometry height="22" width="420" x="-730" y="306" as="geometry"/></mxCell>
+        <mxCell id="nfr2a" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=11;" value="2. CAP Theorem:" vertex="1"><mxGeometry height="22" width="130" x="-730" y="328" as="geometry"/></mxCell>
+        <mxCell id="nfr2b" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="Availability &gt;&gt;&gt; Consistency   (slight delay acceptable, message loss is not)" vertex="1"><mxGeometry height="22" width="490" x="-600" y="328" as="geometry"/></mxCell>
+        <mxCell id="nfr3" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="3. Latency: Message delivery &lt; 100ms via Redis Pub/Sub." vertex="1"><mxGeometry height="22" width="420" x="-730" y="350" as="geometry"/></mxCell>
+        <mxCell id="nfr4" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="4. Concurrency: Each user runs a separate Pub/Sub listener thread (non-blocking)." vertex="1"><mxGeometry height="22" width="530" x="-730" y="372" as="geometry"/></mxCell>
+        <mxCell id="nfr5" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="5. Durability: Messages stored in Redis LIST before delivery (queue-first approach)." vertex="1"><mxGeometry height="22" width="530" x="-730" y="394" as="geometry"/></mxCell>
+
+        <!-- ═══════════════════════════════════════
+             C. CORE ENTITIES
+        ═══════════════════════════════════════ -->
+        <mxCell id="c-hdr" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" value="C. Core Entities" vertex="1">
+          <mxGeometry height="24" width="180" x="60" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="ce1" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="1. User" vertex="1"><mxGeometry height="22" width="100" x="80" y="114" as="geometry"/></mxCell>
+        <mxCell id="ce2" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="2. Room" vertex="1"><mxGeometry height="22" width="100" x="80" y="136" as="geometry"/></mxCell>
+        <mxCell id="ce3" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="3. Message" vertex="1"><mxGeometry height="22" width="100" x="80" y="158" as="geometry"/></mxCell>
+        <mxCell id="ce4" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="4. Queue" vertex="1"><mxGeometry height="22" width="100" x="80" y="180" as="geometry"/></mxCell>
+        <mxCell id="ce5" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="5. Channel (Pub/Sub)" vertex="1"><mxGeometry height="22" width="150" x="80" y="202" as="geometry"/></mxCell>
+        <mxCell id="ce6" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="6. DeliveryLog" vertex="1"><mxGeometry height="22" width="120" x="80" y="224" as="geometry"/></mxCell>
+        <mxCell id="ce7" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="7. SocketHub" vertex="1"><mxGeometry height="22" width="120" x="80" y="246" as="geometry"/></mxCell>
+
+        <!-- ═══════════════════════════════════════
+             D. API / INTERFACE DESIGN
+        ═══════════════════════════════════════ -->
+        <mxCell id="d-hdr" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" value="D. Interface Design" vertex="1">
+          <mxGeometry height="24" width="200" x="320" y="88" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api1h" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=11;" value="TerminalSocketHub:" vertex="1"><mxGeometry height="20" width="160" x="340" y="114" as="geometry"/></mxCell>
+        <mxCell id="api1a" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="register_user(username)" vertex="1"><mxGeometry height="20" width="200" x="360" y="134" as="geometry"/></mxCell>
+        <mxCell id="api1b" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="join_room(username, room)" vertex="1"><mxGeometry height="20" width="200" x="360" y="154" as="geometry"/></mxCell>
+        <mxCell id="api1c" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="emit_to_room(room, message)" vertex="1"><mxGeometry height="20" width="210" x="360" y="174" as="geometry"/></mxCell>
+
+        <mxCell id="api2h" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=11;" value="ChatSystemRedisDemo:" vertex="1"><mxGeometry height="20" width="180" x="340" y="204" as="geometry"/></mxCell>
+        <mxCell id="api2a" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="enqueue_message(sender, room, content)" vertex="1"><mxGeometry height="20" width="270" x="360" y="224" as="geometry"/></mxCell>
+        <mxCell id="api2b" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="process_queue()" vertex="1"><mxGeometry height="20" width="160" x="360" y="244" as="geometry"/></mxCell>
+        <mxCell id="api2c" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="get_room_history(room)" vertex="1"><mxGeometry height="20" width="190" x="360" y="264" as="geometry"/></mxCell>
+        <mxCell id="api2d" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="get_online_users(room)" vertex="1"><mxGeometry height="20" width="180" x="360" y="284" as="geometry"/></mxCell>
+        <mxCell id="api2e" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=11;" value="get_unread_count(username)" vertex="1"><mxGeometry height="20" width="200" x="360" y="304" as="geometry"/></mxCell>
+
+        <!-- ═══════════════════════════════════════
+             DIVIDER
+        ═══════════════════════════════════════ -->
+        <mxCell id="div1" parent="1" style="endArrow=none;html=1;strokeWidth=5;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-750" y="440" as="sourcePoint" />
+            <mxPoint x="1600" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════
+             E. HIGH LEVEL DESIGN LABEL
+        ═══════════════════════════════════════ -->
+        <mxCell id="hld-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontStyle=1;fontSize=13;" value="E. HIGH LEVEL DESIGN" vertex="1">
+          <mxGeometry height="24" width="300" x="200" y="448" as="geometry" />
+        </mxCell>
+
+        <!-- MESSAGE FLOW LABEL -->
+        <mxCell id="flow-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontStyle=1;fontSize=11;" value="Message Flow:  User → Queue → Worker → Redis → Pub/Sub → Socket Hub → Users" vertex="1">
+          <mxGeometry height="22" width="580" x="60" y="472" as="geometry" />
+        </mxCell>
+
+        <!-- ═══ USERS (terminal clients) ═══ -->
+        <mxCell id="users-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#003070;fontColor=#ffffff;strokeColor=#001a40;fontStyle=1;fontSize=12;" value="Terminal Users&lt;div&gt;(Alice / Bob / Carol)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="-750" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="users-note" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="- Each user has a Pub/Sub&lt;br&gt;  listener thread&lt;br&gt;- Joins rooms&lt;br&gt;- Sends messages" vertex="1">
+          <mxGeometry height="60" width="170" x="-750" y="578" as="geometry" />
+        </mxCell>
+
+        <!-- ═══ SOCKET HUB ═══ -->
+        <mxCell id="socket-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e6b1e;fontColor=#ffffff;strokeColor=#1a4a1a;fontStyle=1;fontSize=12;" value="TerminalSocketHub&lt;div&gt;(Simulated Socket.IO)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="-500" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="socket-note" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="- Mimics WebSocket behavior&lt;br&gt;- Registers users&lt;br&gt;- Routes messages to rooms&lt;br&gt;- Prints delivery to terminal" vertex="1">
+          <mxGeometry height="60" width="190" x="-500" y="578" as="geometry" />
+        </mxCell>
+
+        <!-- users → socket hub -->
+        <mxCell id="e-u-sh" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#003070;strokeWidth=2;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-580" y="540" as="sourcePoint" />
+            <mxPoint x="-502" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-u-sh-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=10;fontStyle=1;" value="send message" vertex="1"><mxGeometry height="16" width="90" x="-600" y="522" as="geometry"/></mxCell>
+
+        <!-- ═══ REDIS QUEUE ═══ -->
+        <mxCell id="queue-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a30000;fontColor=#ffffff;strokeColor=#6b0000;fontStyle=1;fontSize=12;" value="Redis LIST Queue&lt;div&gt;chat:queue&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="-220" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="queue-note" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="- FIFO processing&lt;br&gt;- LPUSH on send&lt;br&gt;- RPOP by worker&lt;br&gt;- Decouples sender &amp; receiver" vertex="1">
+          <mxGeometry height="60" width="170" x="-220" y="578" as="geometry" />
+        </mxCell>
+
+        <!-- socket → queue -->
+        <mxCell id="e-sh-q" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1e6b1e;strokeWidth=2;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-308" y="540" as="sourcePoint" />
+            <mxPoint x="-222" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-sh-q-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=10;fontStyle=1;" value="enqueue_message()&lt;br&gt;LPUSH" vertex="1"><mxGeometry height="28" width="100" x="-330" y="515" as="geometry"/></mxCell>
+
+        <!-- ═══ WORKER ═══ -->
+        <mxCell id="worker-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8a5c00;fontColor=#ffffff;strokeColor=#5a3e00;fontStyle=1;fontSize=12;" value="Worker&lt;div&gt;process_queue()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="worker-note" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="- Pops from queue&lt;br&gt;- Saves to history&lt;br&gt;- Updates unread count&lt;br&gt;- Publishes to Pub/Sub" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="578" as="geometry" />
+        </mxCell>
+
+        <!-- queue → worker -->
+        <mxCell id="e-q-w" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#a30000;strokeWidth=2;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-48" y="540" as="sourcePoint" />
+            <mxPoint x="38" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-q-w-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=10;fontStyle=1;" value="RPOP" vertex="1"><mxGeometry height="16" width="50" x="-28" y="522" as="geometry"/></mxCell>
+
+        <!-- ═══ REDIS STORAGE cluster ═══ -->
+        <mxCell id="redis-outer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#a30000;strokeWidth=2;dashed=1;" value="" vertex="1">
+          <mxGeometry height="200" width="380" x="300" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="redis-outer-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" value="Redis Storage Layer" vertex="1">
+          <mxGeometry height="22" width="200" x="390" y="492" as="geometry" />
+        </mxCell>
+
+        <!-- SET -->
+        <mxCell id="r-set" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a007a;fontColor=#ffffff;strokeColor=#2e0050;fontSize=10;" value="SET&lt;div&gt;chat:room:{room}:users&lt;/div&gt;&lt;div&gt;Room members&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="315" y="520" as="geometry" />
+        </mxCell>
+        <!-- LIST history -->
+        <mxCell id="r-list" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a007a;fontColor=#ffffff;strokeColor=#2e0050;fontSize=10;" value="LIST&lt;div&gt;chat:messages:{room}&lt;/div&gt;&lt;div&gt;Last 20 messages&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="505" y="520" as="geometry" />
+        </mxCell>
+        <!-- STRING status -->
+        <mxCell id="r-str" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a007a;fontColor=#ffffff;strokeColor=#2e0050;fontSize=10;" value="STRING&lt;div&gt;chat:user:{u}:status&lt;/div&gt;&lt;div&gt;Online / TTL=30s&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="315" y="590" as="geometry" />
+        </mxCell>
+        <!-- HASH log -->
+        <mxCell id="r-hash" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a007a;fontColor=#ffffff;strokeColor=#2e0050;fontSize=10;" value="HASH&lt;div&gt;chat:log:{msg_id}&lt;/div&gt;&lt;div&gt;Delivery metadata&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="505" y="590" as="geometry" />
+        </mxCell>
+        <!-- COUNTER -->
+        <mxCell id="r-ctr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a007a;fontColor=#ffffff;strokeColor=#2e0050;fontSize=10;" value="STRING (INCR)&lt;div&gt;chat:unread:{user}&lt;/div&gt;&lt;div&gt;Unread count&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="410" y="655" as="geometry" />
+        </mxCell>
+
+        <!-- worker → redis storage -->
+        <mxCell id="e-w-r" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#8a5c00;strokeWidth=2;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="202" y="540" as="sourcePoint" />
+            <mxPoint x="298" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-w-r-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=10;fontStyle=1;" value="write" vertex="1"><mxGeometry height="16" width="40" x="228" y="522" as="geometry"/></mxCell>
+
+        <!-- ═══ REDIS PUB/SUB ═══ -->
+        <mxCell id="pubsub-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a30000;fontColor=#ffffff;strokeColor=#6b0000;fontStyle=1;fontSize=12;" value="Redis Pub/Sub&lt;div&gt;channel: chat:{room}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="300" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="pubsub-note" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="- PUBLISH on message deliver&lt;br&gt;- All subscribers receive instantly&lt;br&gt;- One channel per room&lt;br&gt;- Sub-millisecond broadcast" vertex="1">
+          <mxGeometry height="60" width="210" x="300" y="798" as="geometry" />
+        </mxCell>
+
+        <!-- worker → pubsub -->
+        <mxCell id="e-w-ps" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#8a5c00;strokeWidth=2;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="572" as="sourcePoint" />
+            <mxPoint x="120" y="760" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="120" y="760" />
+              <mxPoint x="298" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-w-ps-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=10;fontStyle=1;" value="PUBLISH" vertex="1"><mxGeometry height="16" width="65" x="60" y="680" as="geometry"/></mxCell>
+
+        <!-- pubsub → socket hub → users (delivery back) -->
+        <mxCell id="e-ps-sh" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#a30000;strokeWidth=2;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="298" y="760" as="sourcePoint" />
+            <mxPoint x="-400" y="760" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-400" y="760" />
+              <mxPoint x="-400" y="572" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-ps-sh-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=10;fontStyle=1;" value="SUBSCRIBE → emit_to_room()" vertex="1"><mxGeometry height="16" width="190" x="-330" y="742" as="geometry"/></mxCell>
+
+        <!-- socket → users (final delivery) -->
+        <mxCell id="e-sh-u" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1e6b1e;strokeWidth=2;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-502" y="560" as="sourcePoint" />
+            <mxPoint x="-582" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-sh-u-lbl" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=10;fontStyle=1;" value="print to terminal" vertex="1"><mxGeometry height="16" width="110" x="-620" y="562" as="geometry"/></mxCell>
+
+        <!-- ═══ THREADS box ═══ -->
+        <mxCell id="thread-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#005555;fontColor=#ffffff;strokeColor=#003333;fontStyle=1;fontSize=11;" value="Listener Threads&lt;div&gt;threading.Thread per user&lt;/div&gt;&lt;div&gt;_listen_pubsub()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="-750" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="thread-note" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="- Each user has own thread&lt;br&gt;- Non-blocking system&lt;br&gt;- Simulates concurrent users" vertex="1">
+          <mxGeometry height="48" width="200" x="-750" y="798" as="geometry" />
+        </mxCell>
+
+        <!-- threads ↔ pubsub -->
+        <mxCell id="e-th-ps" parent="1" style="endArrow=block;endFill=1;startArrow=block;startFill=1;html=1;strokeColor=#005555;strokeWidth=2;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-548" y="760" as="sourcePoint" />
+            <mxPoint x="298" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════
+             DIVIDER 2
+        ═══════════════════════════════════════ -->
+        <mxCell id="div2" parent="1" style="endArrow=none;html=1;strokeWidth=5;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-750" y="880" as="sourcePoint" />
+            <mxPoint x="1600" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════
+             F. REDIS KEY DESIGN
+        ═══════════════════════════════════════ -->
+        <mxCell id="f-hdr" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" value="F. Redis Key Design (Why each structure was chosen)" vertex="1">
+          <mxGeometry height="24" width="420" x="-750" y="888" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rk1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#a30000;fontColor=#ffffff;strokeColor=#6b0000;fontStyle=1;fontSize=11;align=left;" value="  STRING  →  chat:user:{username}:status" vertex="1"><mxGeometry height="28" width="310" x="-750" y="916" as="geometry"/></mxCell>
+        <mxCell id="rk1n" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="Why STRING? Simple on/off value. TTL=30s auto-expires → user auto goes offline if no heartbeat." vertex="1"><mxGeometry height="18" width="500" x="-730" y="944" as="geometry"/></mxCell>
+
+        <mxCell id="rk2" parent="1" style="whiteSpace=wrap;html=1;fillColor=#4a007a;fontColor=#ffffff;strokeColor=#2e0050;fontStyle=1;fontSize=11;align=left;" value="  SET  →  chat:room:{roomName}:users" vertex="1"><mxGeometry height="28" width="290" x="-750" y="968" as="geometry"/></mxCell>
+        <mxCell id="rk2n" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="Why SET? No duplicate users. O(1) add/remove. Perfect for room membership." vertex="1"><mxGeometry height="18" width="460" x="-730" y="996" as="geometry"/></mxCell>
+
+        <mxCell id="rk3" parent="1" style="whiteSpace=wrap;html=1;fillColor=#a30000;fontColor=#ffffff;strokeColor=#6b0000;fontStyle=1;fontSize=11;align=left;" value="  LIST  →  chat:queue" vertex="1"><mxGeometry height="28" width="200" x="-750" y="1020" as="geometry"/></mxCell>
+        <mxCell id="rk3n" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="Why LIST? FIFO message queue. LPUSH to add, RPOP to consume. Decouples sender from receiver." vertex="1"><mxGeometry height="18" width="510" x="-730" y="1048" as="geometry"/></mxCell>
+
+        <mxCell id="rk4" parent="1" style="whiteSpace=wrap;html=1;fillColor=#a30000;fontColor=#ffffff;strokeColor=#6b0000;fontStyle=1;fontSize=11;align=left;" value="  LIST  →  chat:messages:{roomName}" vertex="1"><mxGeometry height="28" width="270" x="-750" y="1072" as="geometry"/></mxCell>
+        <mxCell id="rk4n" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="Why LIST? Ordered history. LRANGE 0 19 fetches last 20 messages instantly." vertex="1"><mxGeometry height="18" width="450" x="-730" y="1100" as="geometry"/></mxCell>
+
+        <mxCell id="rk5" parent="1" style="whiteSpace=wrap;html=1;fillColor=#4a007a;fontColor=#ffffff;strokeColor=#2e0050;fontStyle=1;fontSize=11;align=left;" value="  HASH  →  chat:log:{message_id}" vertex="1"><mxGeometry height="28" width="270" x="-750" y="1124" as="geometry"/></mxCell>
+        <mxCell id="rk5n" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="Why HASH? Stores multiple fields per message (sender, content, timestamp, status) in one key." vertex="1"><mxGeometry height="18" width="520" x="-730" y="1152" as="geometry"/></mxCell>
+
+        <mxCell id="rk6" parent="1" style="whiteSpace=wrap;html=1;fillColor=#a30000;fontColor=#ffffff;strokeColor=#6b0000;fontStyle=1;fontSize=11;align=left;" value="  PUB/SUB  →  channel: chat:{roomName}" vertex="1"><mxGeometry height="28" width="290" x="-750" y="1176" as="geometry"/></mxCell>
+        <mxCell id="rk6n" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="Why PUB/SUB? Instant broadcast to all subscribers. One publish reaches all users in a room." vertex="1"><mxGeometry height="18" width="510" x="-730" y="1204" as="geometry"/></mxCell>
+
+        <mxCell id="rk7" parent="1" style="whiteSpace=wrap;html=1;fillColor=#a30000;fontColor=#ffffff;strokeColor=#6b0000;fontStyle=1;fontSize=11;align=left;" value="  STRING (INCR)  →  chat:unread:{username}" vertex="1"><mxGeometry height="28" width="300" x="-750" y="1228" as="geometry"/></mxCell>
+        <mxCell id="rk7n" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=10;" value="Why INCR? Atomic counter. INCR on receive, SET 0 on read. No race conditions." vertex="1"><mxGeometry height="18" width="470" x="-730" y="1256" as="geometry"/></mxCell>
+
+        <!-- ═══════════════════════════════════════
+             G. LIMITATIONS
+        ═══════════════════════════════════════ -->
+        <mxCell id="g-hdr" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" value="G. Limitations (Scope for improvement)" vertex="1">
+          <mxGeometry height="24" width="320" x="400" y="888" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lim1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ff6666;strokeColor=#666666;align=left;fontSize=11;" value="  ✗  No authentication (username only, no password)" vertex="1"><mxGeometry height="28" width="380" x="400" y="916" as="geometry"/></mxCell>
+        <mxCell id="lim2" parent="1" style="whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ff6666;strokeColor=#666666;align=left;fontSize=11;" value="  ✗  No persistent DB — only Redis (data lost on restart)" vertex="1"><mxGeometry height="28" width="380" x="400" y="948" as="geometry"/></mxCell>
+        <mxCell id="lim3" parent="1" style="whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ff6666;strokeColor=#666666;align=left;fontSize=11;" value="  ✗  Single worker — not distributed" vertex="1"><mxGeometry height="28" width="380" x="400" y="980" as="geometry"/></mxCell>
+        <mxCell id="lim4" parent="1" style="whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ff6666;strokeColor=#666666;align=left;fontSize=11;" value="  ✗  No message retry mechanism (no DLQ)" vertex="1"><mxGeometry height="28" width="380" x="400" y="1012" as="geometry"/></mxCell>
+        <mxCell id="lim5" parent="1" style="whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ff6666;strokeColor=#666666;align=left;fontSize=11;" value="  ✗  Terminal-based only (no UI / no browser)" vertex="1"><mxGeometry height="28" width="380" x="400" y="1044" as="geometry"/></mxCell>
+        <mxCell id="lim6" parent="1" style="whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ff6666;strokeColor=#666666;align=left;fontSize=11;" value="  ✗  No horizontal scaling (single Redis instance)" vertex="1"><mxGeometry height="28" width="380" x="400" y="1076" as="geometry"/></mxCell>
+
+        <!-- ═══════════════════════════════════════
+             H. SD CONCEPTS COVERED
+        ═══════════════════════════════════════ -->
+        <mxCell id="h-hdr" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontStyle=1;fontSize=12;" value="H. System Design Concepts Demonstrated" vertex="1">
+          <mxGeometry height="24" width="360" x="400" y="1118" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#1e6b1e;fontColor=#ffffff;strokeColor=#1a4a1a;align=left;fontSize=11;" value="  ✓  Message Queue System — decouples sender &amp; receiver" vertex="1"><mxGeometry height="28" width="400" x="400" y="1146" as="geometry"/></mxCell>
+        <mxCell id="c2" parent="1" style="whiteSpace=wrap;html=1;fillColor=#1e6b1e;fontColor=#ffffff;strokeColor=#1a4a1a;align=left;fontSize=11;" value="  ✓  Event-Driven Architecture — Pub/Sub model" vertex="1"><mxGeometry height="28" width="400" x="400" y="1178" as="geometry"/></mxCell>
+        <mxCell id="c3" parent="1" style="whiteSpace=wrap;html=1;fillColor=#1e6b1e;fontColor=#ffffff;strokeColor=#1a4a1a;align=left;fontSize=11;" value="  ✓  Scalability — Redis high throughput + async threads" vertex="1"><mxGeometry height="28" width="400" x="400" y="1210" as="geometry"/></mxCell>
+        <mxCell id="c4" parent="1" style="whiteSpace=wrap;html=1;fillColor=#1e6b1e;fontColor=#ffffff;strokeColor=#1a4a1a;align=left;fontSize=11;" value="  ✓  Fault Tolerance — messages stored before delivery" vertex="1"><mxGeometry height="28" width="400" x="400" y="1242" as="geometry"/></mxCell>
+        <mxCell id="c5" parent="1" style="whiteSpace=wrap;html=1;fillColor=#1e6b1e;fontColor=#ffffff;strokeColor=#1a4a1a;align=left;fontSize=11;" value="  ✓  Data Modelling — correct Redis structure per use case" vertex="1"><mxGeometry height="28" width="400" x="400" y="1274" as="geometry"/></mxCell>
+        <mxCell id="c6" parent="1" style="whiteSpace=wrap;html=1;fillColor=#1e6b1e;fontColor=#ffffff;strokeColor=#1a4a1a;align=left;fontSize=11;" value="  ✓  Concurrency — separate listener thread per user" vertex="1"><mxGeometry height="28" width="400" x="400" y="1306" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
