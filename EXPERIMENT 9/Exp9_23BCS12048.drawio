@@ -1,0 +1,243 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="uTXgFJvi3gBG3JNi7Dh-">
+    <mxGraphModel dx="4259" dy="-1334" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kiM3Rb6Sqg5vLP3rn6k9-109" edge="1" parent="1" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="2127" y="2606.9999999999995" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kiM3Rb6Sqg5vLP3rn6k9-110" edge="1" parent="1" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="2310.5" y="2734" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kiM3Rb6Sqg5vLP3rn6k9-114" edge="1" parent="1" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.46;rounded=0;" value="Verify Identity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2370" y="3195" />
+            </Array>
+            <mxPoint x="2369" y="3121" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-63" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="848.5" width="995" x="-1845" y="2280" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-7" connectable="0" parent="_7nknlgKMd_7WueB1gFE-63" style="group" value="" vertex="1">
+          <mxGeometry height="175" width="50" x="5" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-2" parent="_7nknlgKMd_7WueB1gFE-7" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=user" value="" vertex="1">
+          <mxGeometry height="48" width="50" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-5" parent="_7nknlgKMd_7WueB1gFE-7" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=user" value="" vertex="1">
+          <mxGeometry height="48" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-6" parent="_7nknlgKMd_7WueB1gFE-7" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=user" value="" vertex="1">
+          <mxGeometry height="48" width="50" y="127" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-9" parent="_7nknlgKMd_7WueB1gFE-63" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Clients" vertex="1">
+          <mxGeometry height="30" width="60" y="354" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-13" connectable="0" parent="_7nknlgKMd_7WueB1gFE-63" style="group" value="" vertex="1">
+          <mxGeometry height="130" width="103.60000000000002" x="145" y="204" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-10" parent="_7nknlgKMd_7WueB1gFE-13" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.apigateway;" value="" vertex="1">
+          <mxGeometry height="100" width="103.6" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-12" parent="_7nknlgKMd_7WueB1gFE-13" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="API gateway" vertex="1">
+          <mxGeometry height="30" width="100" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-14" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.535;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-25" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="44" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-28" connectable="0" parent="_7nknlgKMd_7WueB1gFE-25" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Login/ Signup" vertex="1">
+          <mxGeometry relative="1" x="-0.2905" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-16" parent="_7nknlgKMd_7WueB1gFE-63" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=user" value="User Service" vertex="1">
+          <mxGeometry height="48" width="50" x="375" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-17" parent="_7nknlgKMd_7WueB1gFE-63" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.looking_glass;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="40" x="395" y="349" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-31" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="654.9999999999998" y="239" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-18" parent="_7nknlgKMd_7WueB1gFE-63" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.move_to_folder;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="385" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-21" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.005;entryY=0.63;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-22" parent="_7nknlgKMd_7WueB1gFE-63" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Show Service" vertex="1">
+          <mxGeometry height="30" width="80" x="370" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-35" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="535" y="444" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-24" parent="_7nknlgKMd_7WueB1gFE-63" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Search Service" vertex="1">
+          <mxGeometry height="30" width="90" x="369" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-26" parent="_7nknlgKMd_7WueB1gFE-63" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mysql_db_instance;fillColor=#2E73B8;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="64.5" width="60" x="575" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-27" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-29" connectable="0" parent="_7nknlgKMd_7WueB1gFE-27" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="JWT token" vertex="1">
+          <mxGeometry relative="1" x="-0.2905" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-30" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-37" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="784.9999999999998" y="304" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-32" parent="_7nknlgKMd_7WueB1gFE-63" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.webicons.mongodb;gradientColor=#DFDEDE" value="Movie DB&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="102.4" width="102.4" x="603.7999999999997" y="187.80000000000018" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-33" parent="_7nknlgKMd_7WueB1gFE-63" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="UserDB" vertex="1">
+          <mxGeometry height="30" width="60" x="645" y="17.25" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-34" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-36" parent="_7nknlgKMd_7WueB1gFE-63" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;" value="Cache with current movie data&lt;div&gt;TTL manual&lt;/div&gt;" vertex="1">
+          <mxGeometry height="42" width="50" x="510" y="423" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-38" parent="_7nknlgKMd_7WueB1gFE-63" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.queue_generic" value="Message queue that stores the new movie" vertex="1">
+          <mxGeometry height="47.5" width="158.33" x="760" y="296.5" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-39" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.909;entryY=0.41;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-40" connectable="0" parent="_7nknlgKMd_7WueB1gFE-39" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="new movie added to redis" vertex="1">
+          <mxGeometry relative="1" x="0.6233" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-43" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="579" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-64" connectable="0" parent="_7nknlgKMd_7WueB1gFE-43" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1. Seat Inventory" vertex="1">
+          <mxGeometry relative="1" x="-0.2571" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-42" parent="_7nknlgKMd_7WueB1gFE-63" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/jpeg,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;" value="Seat Booking Service" vertex="1">
+          <mxGeometry height="70" width="70" x="275" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-41" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.571;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="315" y="564" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-45" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="579" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-47" connectable="0" parent="_7nknlgKMd_7WueB1gFE-45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="2. Once seat booked and redis locked&lt;div&gt;the entry, it will be updated soon&lt;/div&gt;&lt;div&gt;in seat DB&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2604" y="4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-52" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-54">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="525" y="714" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-53" connectable="0" parent="_7nknlgKMd_7WueB1gFE-52" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="4. Once booked User redirected&amp;nbsp;&lt;div&gt;to payment service&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.2583" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-44" parent="_7nknlgKMd_7WueB1gFE-63" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;" value="Seat Availables" vertex="1">
+          <mxGeometry height="42" width="50" x="450" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-46" parent="_7nknlgKMd_7WueB1gFE-63" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mysql_db_instance;fillColor=#2E73B8;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="64.5" width="60" x="858.33" y="535.5" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-49" parent="_7nknlgKMd_7WueB1gFE-63" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Seat DB" vertex="1">
+          <mxGeometry height="30" width="60" x="925" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-50" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.398;entryY=-0.079;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-44">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="888" y="514" />
+              <mxPoint x="470" y="514" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-51" connectable="0" parent="_7nknlgKMd_7WueB1gFE-50" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="3. Respond for&amp;nbsp; booked/ pending/ Not Available" vertex="1">
+          <mxGeometry relative="1" x="-0.1495" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-55" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.052;entryY=0.277;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655" y="714" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-54" parent="_7nknlgKMd_7WueB1gFE-63" style="html=1;whiteSpace=wrap;strokeColor=none;fillColor=#0079D6;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;align=center;fontSize=12;outlineConnect=0;spacingTop=-6;fontColor=#FFFFFF;sketch=0;shape=mxgraph.sitemap.payment;" value="Payment Service" vertex="1">
+          <mxGeometry height="70" width="120" x="405" y="694" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-57" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.155;entryDx=0;entryDy=0;entryPerimeter=0;" target="_7nknlgKMd_7WueB1gFE-60">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="965" y="794" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-58" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-59" connectable="0" parent="_7nknlgKMd_7WueB1gFE-58" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="5. updation of seat" vertex="1">
+          <mxGeometry relative="1" x="0.5796" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-61" edge="1" parent="_7nknlgKMd_7WueB1gFE-63" source="_7nknlgKMd_7WueB1gFE-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_7nknlgKMd_7WueB1gFE-44">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="764" y="604" />
+              <mxPoint x="475" y="604" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-62" connectable="0" parent="_7nknlgKMd_7WueB1gFE-61" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="5. updation in the Redis for seat" vertex="1">
+          <mxGeometry relative="1" x="-0.7033" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-56" parent="_7nknlgKMd_7WueB1gFE-63" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.queue_generic" value="kafka stores the payment info" vertex="1">
+          <mxGeometry height="47.5" width="158.33" x="685" y="701.5" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-60" parent="_7nknlgKMd_7WueB1gFE-63" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mysql_db_instance;fillColor=#2E73B8;gradientColor=none;" value="Payment DB" vertex="1">
+          <mxGeometry height="64.5" width="60" x="935" y="784" as="geometry" />
+        </mxCell>
+        <mxCell id="_7nknlgKMd_7WueB1gFE-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h2 data-section-id=&quot;1xyyno7&quot; data-start=&quot;114&quot; data-end=&quot;148&quot;&gt;🔹 Functional Requirements (FR)&lt;/h2&gt;&lt;ul data-start=&quot;149&quot; data-end=&quot;364&quot;&gt;&lt;li data-section-id=&quot;zy3vyb&quot; data-start=&quot;149&quot; data-end=&quot;170&quot;&gt;User signup/login&lt;/li&gt;&lt;li data-section-id=&quot;1t19i23&quot; data-start=&quot;171&quot; data-end=&quot;208&quot;&gt;Search events (title, city, date)&lt;/li&gt;&lt;li data-section-id=&quot;1lc47dc&quot; data-start=&quot;209&quot; data-end=&quot;250&quot;&gt;View show details &amp;amp; seat availability&lt;/li&gt;&lt;li data-section-id=&quot;1w7y76v&quot; data-start=&quot;251&quot; data-end=&quot;286&quot;&gt;Select &amp;amp; lock seats (temporary)&lt;/li&gt;&lt;li data-section-id=&quot;67l6uu&quot; data-start=&quot;287&quot; data-end=&quot;303&quot;&gt;Book tickets&lt;/li&gt;&lt;li data-section-id=&quot;te9kr4&quot; data-start=&quot;304&quot; data-end=&quot;320&quot;&gt;Make payment&lt;/li&gt;&lt;li data-section-id=&quot;94fmz2&quot; data-start=&quot;321&quot; data-end=&quot;345&quot;&gt;View booking history&lt;/li&gt;&lt;li data-section-id=&quot;74d1s7&quot; data-start=&quot;346&quot; data-end=&quot;364&quot;&gt;Cancel booking&lt;/li&gt;&lt;/ul&gt;&lt;hr data-start=&quot;366&quot; data-end=&quot;369&quot;&gt;&lt;br&gt;&lt;h2 data-section-id=&quot;1lbb3wb&quot; data-start=&quot;371&quot; data-end=&quot;410&quot;&gt;🔹 Non-Functional Requirements (NFR)&lt;/h2&gt;&lt;ul data-start=&quot;411&quot; data-end=&quot;645&quot;&gt;&lt;li data-section-id=&quot;1we3j1o&quot; data-start=&quot;411&quot; data-end=&quot;451&quot;&gt;High scalability (millions of users)&lt;/li&gt;&lt;li data-section-id=&quot;18tvdw&quot; data-start=&quot;452&quot; data-end=&quot;477&quot;&gt;Low latency responses&lt;/li&gt;&lt;li data-section-id=&quot;12f7xa0&quot; data-start=&quot;478&quot; data-end=&quot;537&quot;&gt;Strong consistency for seat booking (no double booking)&lt;/li&gt;&lt;li data-section-id=&quot;1km5nky&quot; data-start=&quot;538&quot; data-end=&quot;570&quot;&gt;High availability for search&lt;/li&gt;&lt;li data-section-id=&quot;w96x65&quot; data-start=&quot;571&quot; data-end=&quot;608&quot;&gt;Fault tolerance (retry, recovery)&lt;/li&gt;&lt;li data-section-id=&quot;14nv7io&quot; data-start=&quot;609&quot; data-end=&quot;645&quot;&gt;Secure authentication &amp;amp; payments&lt;/li&gt;&lt;/ul&gt;&lt;hr data-start=&quot;647&quot; data-end=&quot;650&quot;&gt;&lt;br&gt;&lt;h2 data-section-id=&quot;1hr11gq&quot; data-start=&quot;652&quot; data-end=&quot;662&quot;&gt;🔹 APIs&lt;/h2&gt;&lt;h3 data-section-id=&quot;5d71jt&quot; data-start=&quot;664&quot; data-end=&quot;679&quot;&gt;Auth &amp;amp; User&lt;/h3&gt;&lt;ul data-start=&quot;680&quot; data-end=&quot;751&quot;&gt;&lt;li data-section-id=&quot;1yobzda&quot; data-start=&quot;680&quot; data-end=&quot;703&quot;&gt;&lt;code data-start=&quot;682&quot; data-end=&quot;701&quot;&gt;POST /auth/signup&lt;/code&gt;&lt;/li&gt;&lt;li data-section-id=&quot;1lehr23&quot; data-start=&quot;704&quot; data-end=&quot;726&quot;&gt;&lt;code data-start=&quot;706&quot; data-end=&quot;724&quot;&gt;POST /auth/login&lt;/code&gt;&lt;/li&gt;&lt;li data-section-id=&quot;4fbw1j&quot; data-start=&quot;727&quot; data-end=&quot;751&quot;&gt;&lt;code data-start=&quot;729&quot; data-end=&quot;749&quot;&gt;GET /users/profile&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;1lgl7z&quot; data-start=&quot;753&quot; data-end=&quot;771&quot;&gt;Events &amp;amp; Shows&lt;/h3&gt;&lt;ul data-start=&quot;772&quot; data-end=&quot;860&quot;&gt;&lt;li data-section-id=&quot;9nhun&quot; data-start=&quot;772&quot; data-end=&quot;808&quot;&gt;&lt;code data-start=&quot;774&quot; data-end=&quot;806&quot;&gt;GET /events?city=&amp;amp;date=&amp;amp;title=&lt;/code&gt;&lt;/li&gt;&lt;li data-section-id=&quot;lhi6iy&quot; data-start=&quot;809&quot; data-end=&quot;831&quot;&gt;&lt;code data-start=&quot;811&quot; data-end=&quot;829&quot;&gt;GET /events/{id}&lt;/code&gt;&lt;/li&gt;&lt;li data-section-id=&quot;wggar9&quot; data-start=&quot;832&quot; data-end=&quot;860&quot;&gt;&lt;code data-start=&quot;834&quot; data-end=&quot;858&quot;&gt;GET /events/{id}/shows&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;77pr7a&quot; data-start=&quot;862&quot; data-end=&quot;871&quot;&gt;Seats&lt;/h3&gt;&lt;ul data-start=&quot;872&quot; data-end=&quot;899&quot;&gt;&lt;li data-section-id=&quot;mc1n16&quot; data-start=&quot;872&quot; data-end=&quot;899&quot;&gt;&lt;code data-start=&quot;874&quot; data-end=&quot;897&quot;&gt;GET /shows/{id}/seats&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;cy5vtb&quot; data-start=&quot;901&quot; data-end=&quot;912&quot;&gt;Booking&lt;/h3&gt;&lt;ul data-start=&quot;913&quot; data-end=&quot;1023&quot;&gt;&lt;li data-section-id=&quot;1qs5t1m&quot; data-start=&quot;913&quot; data-end=&quot;941&quot;&gt;&lt;code data-start=&quot;915&quot; data-end=&quot;939&quot;&gt;POST /bookings/reserve&lt;/code&gt;&lt;/li&gt;&lt;li data-section-id=&quot;yxr9yw&quot; data-start=&quot;942&quot; data-end=&quot;970&quot;&gt;&lt;code data-start=&quot;944&quot; data-end=&quot;968&quot;&gt;POST /bookings/confirm&lt;/code&gt;&lt;/li&gt;&lt;li data-section-id=&quot;1swo73j&quot; data-start=&quot;971&quot; data-end=&quot;995&quot;&gt;&lt;code data-start=&quot;973&quot; data-end=&quot;993&quot;&gt;GET /bookings/{id}&lt;/code&gt;&lt;/li&gt;&lt;li data-section-id=&quot;7r0bls&quot; data-start=&quot;996&quot; data-end=&quot;1023&quot;&gt;&lt;code data-start=&quot;998&quot; data-end=&quot;1021&quot;&gt;DELETE /bookings/{id}&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;1bm6in0&quot; data-start=&quot;1025&quot; data-end=&quot;1036&quot;&gt;Payment&lt;/h3&gt;&lt;ul data-start=&quot;1037&quot; data-end=&quot;1101&quot;&gt;&lt;li data-section-id=&quot;1rdsdny&quot; data-start=&quot;1037&quot; data-end=&quot;1072&quot;&gt;&lt;code data-start=&quot;1039&quot; data-end=&quot;1070&quot;&gt;POST /payments/create-session&lt;/code&gt;&lt;/li&gt;&lt;li data-section-id=&quot;y52ga2&quot; data-start=&quot;1073&quot; data-end=&quot;1101&quot;&gt;&lt;code data-start=&quot;1075&quot; data-end=&quot;1099&quot;&gt;POST /payments/webhook&lt;/code&gt;&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;hr data-start=&quot;1103&quot; data-end=&quot;1106&quot;&gt;&lt;br&gt;&lt;h2 data-section-id=&quot;4k31au&quot; data-start=&quot;1108&quot; data-end=&quot;1129&quot;&gt;🔹 Database Design&lt;/h2&gt;&lt;h3 data-section-id=&quot;78nrhg&quot; data-start=&quot;1131&quot; data-end=&quot;1140&quot;&gt;Users&lt;/h3&gt;&lt;ul data-start=&quot;1141&quot; data-end=&quot;1183&quot;&gt;&lt;li data-section-id=&quot;pjjq35&quot; data-start=&quot;1141&quot; data-end=&quot;1157&quot;&gt;user_id (PK)&lt;/li&gt;&lt;li data-section-id=&quot;nxs2xo&quot; data-start=&quot;1158&quot; data-end=&quot;1183&quot;&gt;name, email, password&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;g69g1l&quot; data-start=&quot;1185&quot; data-end=&quot;1195&quot;&gt;Events&lt;/h3&gt;&lt;ul data-start=&quot;1196&quot; data-end=&quot;1236&quot;&gt;&lt;li data-section-id=&quot;fljg4s&quot; data-start=&quot;1196&quot; data-end=&quot;1213&quot;&gt;event_id (PK)&lt;/li&gt;&lt;li data-section-id=&quot;1ybfvsy&quot; data-start=&quot;1214&quot; data-end=&quot;1236&quot;&gt;title, description&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;77xzsm&quot; data-start=&quot;1238&quot; data-end=&quot;1247&quot;&gt;Shows&lt;/h3&gt;&lt;ul data-start=&quot;1248&quot; data-end=&quot;1294&quot;&gt;&lt;li data-section-id=&quot;17a06ir&quot; data-start=&quot;1248&quot; data-end=&quot;1264&quot;&gt;show_id (PK)&lt;/li&gt;&lt;li data-section-id=&quot;1yqm2g8&quot; data-start=&quot;1265&quot; data-end=&quot;1294&quot;&gt;event_id (FK), time, city&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;wa0p9m&quot; data-start=&quot;1296&quot; data-end=&quot;1310&quot;&gt;Show_Seat&lt;/h3&gt;&lt;ul data-start=&quot;1311&quot; data-end=&quot;1393&quot;&gt;&lt;li data-section-id=&quot;bpmccj&quot; data-start=&quot;1311&quot; data-end=&quot;1327&quot;&gt;seat_id (PK)&lt;/li&gt;&lt;li data-section-id=&quot;17mppn9&quot; data-start=&quot;1328&quot; data-end=&quot;1344&quot;&gt;show_id (FK)&lt;/li&gt;&lt;li data-section-id=&quot;11dwy5i&quot; data-start=&quot;1345&quot; data-end=&quot;1381&quot;&gt;status (Available/Locked/Booked)&lt;/li&gt;&lt;li data-section-id=&quot;10n7wxe&quot; data-start=&quot;1382&quot; data-end=&quot;1393&quot;&gt;version&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;14pu1o&quot; data-start=&quot;1395&quot; data-end=&quot;1407&quot;&gt;Bookings&lt;/h3&gt;&lt;ul data-start=&quot;1408&quot; data-end=&quot;1499&quot;&gt;&lt;li data-section-id=&quot;rlbpm1&quot; data-start=&quot;1408&quot; data-end=&quot;1427&quot;&gt;booking_id (PK)&lt;/li&gt;&lt;li data-section-id=&quot;oae6ie&quot; data-start=&quot;1428&quot; data-end=&quot;1458&quot;&gt;user_id (FK), show_id (FK)&lt;/li&gt;&lt;li data-section-id=&quot;7qqogq&quot; data-start=&quot;1459&quot; data-end=&quot;1499&quot;&gt;status (Pending/Confirmed/Cancelled)&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;79o400&quot; data-start=&quot;1501&quot; data-end=&quot;1518&quot;&gt;Booking_Seats&lt;/h3&gt;&lt;ul data-start=&quot;1519&quot; data-end=&quot;1555&quot;&gt;&lt;li data-section-id=&quot;rvdqbj&quot; data-start=&quot;1519&quot; data-end=&quot;1538&quot;&gt;booking_id (FK)&lt;/li&gt;&lt;li data-section-id=&quot;c2bvh1&quot; data-start=&quot;1539&quot; data-end=&quot;1555&quot;&gt;seat_id (FK)&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="30" width="470" x="-2450" y="2900" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
